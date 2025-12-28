@@ -1,0 +1,26 @@
+<div class="npc‑infobox">
+  <a href="{{ include.image }}" target="_blank">
+    <img src="{{ include.image }}" alt="{{ include.title }}">
+  </a>
+  <h3>{{ include.title }}</h3>
+  {% if include.pronouns %}
+  <div class="pronouns">{{ include.pronouns }}</div>
+  {% endif %}
+  <table class="infobox-table">
+    {% if include.species %}
+    <tr><td>Species</td><td>{{ include.species }}</td></tr>
+    {% endif %}
+    {% if include.role %}
+    <tr><td>Role</td><td>{{ include.role }}</td></tr>
+    {% endif %}
+    {% if include.faction %}
+    <tr><td>Faction</td><td>{{ include.faction }}</td></tr>
+    {% endif %}
+    {% if include.location %}
+    <tr><td>Location</td><td>{{ include.location }}</td></tr>
+    {% endif %}
+    {% if include.tags %}
+    <tr><td>Tags</td><td>{{ include.tags }}</td></tr>
+    {% endif %}
+  </table>
+</div>
