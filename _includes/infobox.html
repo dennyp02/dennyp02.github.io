@@ -1,26 +1,49 @@
-<div class="npc‑infobox">
-  <a href="{{ include.image }}" target="_blank">
-    <img src="{{ include.image }}" alt="{{ include.title }}">
-  </a>
-  <h3>{{ include.title }}</h3>
-  {% if include.pronouns %}
-  <div class="pronouns">{{ include.pronouns }}</div>
+<aside class="infobox">
+  {% if include.title %}
+    <div class="infobox-title">{{ include.title }}</div>
   {% endif %}
-  <table class="infobox-table">
+
+  {% if include.image %}
+    <div class="infobox-image">
+      <img src="{{ include.image | relative_url }}" alt="{{ include.title }}">
+    </div>
+  {% endif %}
+
+  <dl class="infobox-list">
+
+    {% if include.pronouns %}
+      <dt>Pronouns</dt>
+      <dd>{{ include.pronouns }}</dd>
+    {% endif %}
+
     {% if include.species %}
-    <tr><td>Species</td><td>{{ include.species }}</td></tr>
+      <dt>Species</dt>
+      <dd>{{ include.species }}</dd>
     {% endif %}
+
     {% if include.role %}
-    <tr><td>Role</td><td>{{ include.role }}</td></tr>
+      <dt>Role</dt>
+      <dd>{{ include.role }}</dd>
     {% endif %}
+
     {% if include.faction %}
-    <tr><td>Faction</td><td>{{ include.faction }}</td></tr>
+      <dt>Faction</dt>
+      <dd>{{ include.faction }}</dd>
     {% endif %}
+
     {% if include.location %}
-    <tr><td>Location</td><td>{{ include.location }}</td></tr>
+      <dt>Location</dt>
+      <dd>{{ include.location }}</dd>
     {% endif %}
+
     {% if include.tags %}
-    <tr><td>Tags</td><td>{{ include.tags }}</td></tr>
+      <dt>Tags</dt>
+      <dd class="infobox-tags">
+        {% for tag in include.tags %}
+          <span class="infobox-tag">{{ tag }}</span>
+        {% endfor %}
+      </dd>
     {% endif %}
-  </table>
-</div>
+
+  </dl>
+</aside>
