@@ -1,27 +1,22 @@
 ---
-title: NPC TEMPLATE
-date: 2024-01-15
-feed: show
-tags:
-  - npc
-  - arcadia
-  - guild
+title: "TEST NPC"
+date: 2025-01-15
+feed: "show"
 ---
-<div class="infobox">
 
-![MY FIRST NOTE](/assets/images/npcs/test-npc.jpg)
-
-### MY FIRST NOTE
-<span class="pronouns">he/him</span>
-
-| | |
-|---|---|
-| **Species** | Human |
-| **Role** | Guild Liaison |
-| **Faction** | [[Green Door Solutions]] |
-| **Location** | Arcadia – The Warren |
-| **Tags** | npc · arcadia · guild |
-
+<div class="npc-infobox">
+  <img src="/assets/images/npcs/test-npc.jpg" alt="TEST NPC">
+  <h3 class="infobox-name">TEST NPC</h3>
+  <div class="infobox-pronouns">(he/him)</div>
+  <table class="infobox-table">
+    <tr><td>Species</td><td>Human</td></tr>
+    <tr><td>Profession</td><td>Guild Liaison</td></tr>
+    <tr><td>Faction</td><td>[[Green Door Solutions]]</td></tr>
+    <tr><td>Location</td><td>[[Arcadia – The Warren]]</td></tr>
+    <tr><td>Tags</td><td>npc · arcadia · guild</td></tr>
+  </table>
 </div>
 
-Test text here
+### Overview
+
+Here’s your note’s main content. Text flows naturally around the right-floating infobox.

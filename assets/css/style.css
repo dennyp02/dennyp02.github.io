@@ -778,65 +778,48 @@ li a[href^="http://"]:after, li a[href^="https://"]:after {
   background-size: 1em 1em;
   opacity: 0.7;
 }
-.infobox {
+/* ===== NPC Infobox ===== */
+.npc-infobox {
   float: right;
   width: 280px;
-  margin: 0 0 1.2rem 1.5rem;
-  padding: 0.75rem;
-  border: 1px solid var(--border-color, #ccc);
-  background: var(--background-secondary, #f8f9fa);
+  margin: 0 1.5rem 1rem 0;
+  padding: 0.8rem;
+  background: var(--background-secondary, #f9f9f9);
+  border: 1px solid var(--background-modifier-border, #ccc);
   border-radius: 6px;
   font-size: 0.9rem;
 }
 
-.infobox-title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.infobox-image img {
+.npc-infobox img {
+  display: block;
   width: 100%;
-  height: auto;
-  border-radius: 4px;
   margin-bottom: 0.5rem;
-}
-
-.infobox-list {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 0.5rem;
-  row-gap: 0.4rem;
-}
-
-.infobox-list dt {
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.infobox-list dd {
-  margin: 0;
-}
-
-.infobox-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-}
-
-.infobox-tag {
-  background: var(--background-tertiary, #e0e0e0);
-  padding: 0.15rem 0.4rem;
   border-radius: 4px;
-  font-size: 0.75rem;
 }
 
-/* Mobile: stop floating */
-@media (max-width: 768px) {
-  .infobox {
-    float: none;
-    width: 100%;
-    margin: 1rem 0;
-  }
+.infobox-name {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.infobox-pronouns {
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-bottom: 0.6rem;
+}
+
+.infobox-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.infobox-table td {
+  padding: 2px 0;
+}
+
+.infobox-table td:first-child {
+  font-weight: bold;
 }
