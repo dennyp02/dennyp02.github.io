@@ -778,3 +778,51 @@ li a[href^="http://"]:after, li a[href^="https://"]:after {
   background-size: 1em 1em;
   opacity: 0.7;
 }
+
+/* ========== NPC Infobox (Wiki‑style) ========== */
+
+.npc-infobox {
+  float: right;
+  width: 280px;
+  margin: 0 1.5rem 1rem 0;
+  padding: 0.8rem;
+  background: var(--background-secondary, #f8f9fa);
+  border: 1px solid var(--background-modifier-border, #ccc);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.npc-infobox img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.infobox-name {
+  text-align: center;
+  font-weight: bold;
+  margin: 0 0 0.3rem 0;
+}
+
+.infobox-pronouns {
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-bottom: 0.7rem;
+}
+
+.infobox-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.infobox-table td {
+  padding: 0.25rem 0;
+  vertical-align: top;
+}
+
+.infobox-table td:first-child {
+  font-weight: bold;
+}
