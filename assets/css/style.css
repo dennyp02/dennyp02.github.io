@@ -779,11 +779,10 @@ li a[href^="http://"]:after, li a[href^="https://"]:after {
   opacity: 0.7;
 }
 
-/* ========== NPC Infobox (Wiki‑style) ========== */
-
+/* ===== NPC Infobox Overrides (Wiki‑Style) ===== */
 .npc-infobox {
-  float: right;
-  width: 280px;
+  float: right !important;
+  width: 300px !important;
   margin: 0 1.5rem 1rem 0;
   padding: 0.8rem;
   background: var(--background-secondary, #f8f9fa);
@@ -792,37 +791,48 @@ li a[href^="http://"]:after, li a[href^="https://"]:after {
   font-size: 0.9rem;
 }
 
-.npc-infobox img {
-  display: block;
+/* Scales the image to max 300px, keeps ratio */
+.npc-infobox-img {
+  max-width: 300px;
   width: 100%;
   height: auto;
-  margin-bottom: 0.5rem;
+  display: block;
+  margin: 0 auto 0.5rem;
   border-radius: 4px;
 }
 
-.infobox-name {
+/* Prevent theme from overriding float */
+.npc-infobox .infobox-name {
   text-align: center;
   font-weight: bold;
-  margin: 0 0 0.3rem 0;
+  margin-bottom: 0.3rem;
 }
 
-.infobox-pronouns {
+.npc-infobox .infobox-pronouns {
   text-align: center;
   font-size: 0.85rem;
   opacity: 0.7;
   margin-bottom: 0.7rem;
 }
 
-.infobox-table {
+/* Structured table */
+.npc-infobox .infobox-table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 0.9rem;
 }
-
-.infobox-table td {
+.npc-infobox .infobox-table td {
   padding: 0.25rem 0;
-  vertical-align: top;
+}
+.npc-infobox .infobox-table td:first-child {
+  font-weight: bold;
 }
 
-.infobox-table td:first-child {
-  font-weight: bold;
+/* Mobile fallback: stack instead of float */
+@media (max-width: 768px) {
+  .npc-infobox {
+    float: none !important;
+    width: 100% !important;
+    margin: 1rem 0;
+  }
 }

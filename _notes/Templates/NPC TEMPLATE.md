@@ -7,16 +7,13 @@ tags: [npc, arcadia, guild]
 
 <div class="npc-infobox">
 
-  <!-- Portrait -->
-  <img src="{{ '/assets/images/npcs/test-npc.jpg' | relative_url }}" alt="Test NPC">
+  <a href="{{ '/assets/images/npcs/test-npc.jpg' | relative_url }}" target="_blank" rel="noopener">
+    <img class="npc-infobox-img" src="{{ '/assets/images/npcs/test-npc.jpg' | relative_url }}" alt="Test NPC">
+  </a>
 
-  <!-- Name -->
   <h3 class="infobox-name">Test NPC</h3>
-
-  <!-- Pronouns -->
   <div class="infobox-pronouns">(he/him)</div>
 
-  <!-- Info table -->
   <table class="infobox-table">
     <tr><td>Species</td><td>Human</td></tr>
     <tr><td>Profession</td><td>Guild Liaison</td></tr>
@@ -26,6 +23,7 @@ tags: [npc, arcadia, guild]
   </table>
 
 </div>
+
 
 ## Overview
 
